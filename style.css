@@ -1,0 +1,274 @@
+/* Style global du corps de la page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
+    background: url('image.jpg') no-repeat center center fixed; /* Image de fond fixée */
+    background-size: cover; /* L'image occupe tout l'espace disponible */
+    margin: 0; /* Suppression des marges par défaut */
+    padding: 0; /* Suppression des espacements par défaut */
+    animation: changementCouleurFond 10s infinite alternate; /* Animation du changement de couleur de fond */
+    color: #333; /* Couleur par défaut du texte */
+}
+
+/* Animation pour le changement de couleur de fond */
+@keyframes changementCouleurFond {
+    0%, 100% {
+        background-color: #f5f7fa; /* Couleur claire par défaut */
+    }
+    50% {
+        background-color: #c3cfe2; /* Couleur intermédiaire plus sombre */
+    }
+}
+
+/* Style du bandeau de titre */
+header {
+    background: linear-gradient(90deg, #4CAF50, #45a049, #3b8d3b); /* Dégradé de vert */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Alignement centré */
+    padding: 2rem 0; /* Espacement vertical */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre sous le bandeau */
+    position: sticky; /* Reste visible en haut lors du défilement */
+    top: 0; /* Collé en haut */
+    z-index: 1000; /* Priorité de superposition */
+    display: flex; /* Flexbox pour l'alignement */
+    align-items: center; /* Alignement vertical */
+    justify-content: center; /* Alignement horizontal */
+    flex-direction: column; /* Contenu empilé verticalement */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animations de survol */
+}
+
+header:hover {
+    transform: translateY(-2px); /* Effet de soulèvement */
+    background: linear-gradient(90deg, #3b8d3b, #45a049, #4CAF50); /* Modification du dégradé */
+}
+
+/* Style du titre principal */
+header h1 {
+    font-size: 2.8rem; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    margin: 0; /* Pas d'espacement extérieur */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+/* Sous-titre */
+header p {
+    margin-top: 0.5rem; /* Espacement au-dessus */
+    font-size: 1.2rem; /* Taille du texte */
+    font-style: italic; /* Texte en italique */
+    color: rgba(255, 255, 255, 0.8); /* Texte légèrement transparent */
+}
+
+/* Bouton dans le bandeau */
+header .cta-button {
+    margin-top: 1rem; /* Espacement au-dessus */
+    background-color: white; /* Fond blanc */
+    color: #4CAF50; /* Texte vert */
+    padding: 10px 20px; /* Espacement intérieur */
+    border-radius: 30px; /* Coins arrondis */
+    font-size: 1rem; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    text-transform: uppercase; /* Texte en majuscules */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre sous le bouton */
+    cursor: pointer; /* Curseur interactif */
+    text-decoration: none; /* Suppression du soulignement */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Animations */
+}
+
+header .cta-button:hover {
+    background-color: #45a049; /* Fond vert foncé */
+    color: white; /* Texte blanc */
+    transform: translateY(-3px); /* Effet de soulèvement */
+}
+
+header .cta-button:active {
+    transform: translateY(1px); /* Effet d'enfoncement */
+}
+
+
+
+/* Contenu principal */
+main {
+    padding: 3rem 2rem; /* Espacement intérieur */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Contenu empilé verticalement */
+    justify-content: center; /* Centrage vertical */
+    align-items: center; /* Centrage horizontal */
+    min-height: calc(100vh - 134px); /* Hauteur minimale du contenu */
+}
+
+/* Barre de recherche */
+.search-bar {
+    width: 90%; /* Largeur adaptative */
+    max-width: 800px; /* Largeur maximale */
+    margin-bottom: 20px; /* Espacement au-dessous */
+    display: flex; /* Flexbox */
+    align-items: center; /* Alignement vertical */
+    position: relative; /* Nécessaire pour positionner le bouton */
+}
+
+.search-bar input {
+    width: 100%; /* Largeur totale */
+    padding: 15px 20px; /* Espacement intérieur */
+    font-size: 1rem; /* Taille du texte */
+    border: 1px solid #ddd; /* Bord gris clair */
+    border-radius: 30px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    outline: none; /* Suppression de l'encadrement au focus */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animations */
+}
+
+.search-bar input:focus {
+    border-color: #4CAF50; /* Bord vert au focus */
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2); /* Ombre accentuée */
+}
+
+.search-bar button {
+    position: absolute; /* Positionnement relatif à la barre */
+    right: 10px; /* Espacement à droite */
+    padding: 10px 15px; /* Espacement intérieur */
+    background-color: #4CAF50; /* Fond vert */
+    color: white; /* Texte blanc */
+    border: none; /* Suppression des bordures */
+    border-radius: 50%; /* Forme circulaire */
+    cursor: pointer; /* Curseur interactif */
+    font-size: 1.2rem; /* Taille du texte */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animations */
+}
+
+.search-bar button:hover {
+    background-color: #45a049; /* Fond vert foncé */
+    transform: scale(1.1); /* Agrandissement */
+}
+
+/* Bouton "Ajouter une musique" */
+.add-music-btn {
+    text-align: center; /* Centrage du contenu */
+    margin-top: 30px; /* Espacement au-dessus */
+}
+
+.add-music-btn button {
+    background-color: #4CAF50; /* Fond vert */
+    color: white; /* Texte blanc */
+    padding: 12px 25px; /* Espacement intérieur */
+    font-size: 1.1rem; /* Taille du texte */
+    border: none; /* Suppression des bordures */
+    border-radius: 30px; /* Coins arrondis */
+    cursor: pointer; /* Curseur interactif */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animations */
+}
+
+.add-music-btn button:hover {
+    background-color: #45a049; /* Fond vert foncé au survol */
+    transform: translateY(-2px); /* Effet de soulèvement */
+}
+
+.add-music-btn button:active {
+    transform: translateY(1px); /* Effet d'enfoncement */
+}
+
+/* Formulaire d'ajout de musique */
+#addMusicForm {
+    display: none; /* Formulaire initialement caché */
+    background-color: white; /* Fond blanc */
+    padding: 2rem; /* Espacement intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre prononcée */
+    width: 100%; /* Largeur adaptative */
+    max-width: 600px; /* Largeur maximale */
+    margin-top: 20px; /* Espacement au-dessus */
+    animation: glisserDans 0.8s ease-out; /* Animation de glissement */
+}
+
+#addMusicForm label {
+    display: block; /* Chaque label sur une ligne séparée */
+    margin-bottom: 10px; /* Espacement au-dessous */
+    font-weight: bold; /* Texte en gras */
+    font-size: 1.1rem; /* Taille du texte */
+}
+
+#addMusicForm input,
+#addMusicForm select {
+    width: 100%; /* Largeur totale */
+    padding: 12px; /* Espacement intérieur */
+    margin-bottom: 20px; /* Espacement entre les champs */
+    font-size: 1rem; /* Taille du texte */
+    border-radius: 5px; /* Coins arrondis */
+    border: 1px solid #ddd; /* Bord gris clair */
+    background-color: #f9f9f9; /* Fond gris clair */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animations */
+}
+
+#addMusicForm input:focus,
+#addMusicForm select:focus {
+    border-color: #4CAF50; /* Bord vert au focus */
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2); /* Ombre accentuée */
+}
+
+#addMusicForm button {
+    background-color: #4CAF50; /* Fond vert */
+    color: white; /* Texte blanc */
+    padding: 12px 25px; /* Espacement intérieur */
+    font-size: 1.1rem; /* Taille du texte */
+    border: none; /* Suppression des bordures */
+    border-radius: 30px; /* Coins arrondis */
+    cursor: pointer; /* Curseur interactif */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animations */
+}
+
+#addMusicForm button:hover {
+    background-color: #45a049; /* Fond vert foncé */
+    transform: translateY(-2px); /* Effet de soulèvement */
+}
+
+#addMusicForm button:active {
+    transform: translateY(1px); /* Effet d'enfoncement */
+}
+
+/* Style du tableau pour la liste des musiques */
+table {
+    width: 90%; /* Largeur adaptative */
+    max-width: 800px; /* Largeur maximale */
+    border-collapse: collapse; /* Fusion des bordures */
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc légèrement transparent */
+    border-radius: 8px; /* Coins arrondis */
+    overflow: hidden; /* Contenu limité aux bordures */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transform: translateY(0); /* Position par défaut */
+    animation: glisserDans 0.8s ease-out; /* Animation de glissement */
+}
+
+/* En-tête du tableau */
+thead {
+    background-color: rgba(76, 175, 80, 0.8); /* Fond vert transparent */
+    color: white; /* Texte blanc */
+}
+
+th, td {
+    padding: 1rem; /* Espacement intérieur */
+    text-align: left; /* Alignement du texte */
+    border-bottom: 1px solid #ddd; /* Bordure entre les lignes */
+}
+
+tr:nth-child(even) {
+    background-color: rgba(242, 242, 242, 0.8); /* Fond gris clair pour les lignes paires */
+}
+
+tr:hover {
+    background-color: rgba(224, 247, 250, 0.8); /* Couleur au survol */
+    cursor: pointer; /* Curseur interactif */
+    transition: background-color 0.3s ease; /* Animation au survol */
+}
+
+/* Animation de glissement */
+@keyframes glisserDans {
+    from {
+        transform: translateY(20px); /* Départ en bas */
+        opacity: 0; /* Transparence initiale */
+    }
+    to {
+        transform: translateY(0); /* Arrivée à la position initiale */
+        opacity: 1; /* Opacité finale */
+    }
+}
